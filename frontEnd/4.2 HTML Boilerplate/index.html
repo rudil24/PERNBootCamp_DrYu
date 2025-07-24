@@ -1,0 +1,136 @@
+<!-- just by typing !<Enter> aka "bang enter" in a blank .html file, vscode will paste in the following HTML5 boilerplate -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>The HTML Boilerplate</title>
+</head>
+<body>
+<!-- end HTML boilerplate, other than the closing </body> and </html> tags i put at the bottom of this file to properly close those tags -->
+<!-- explanation of the boilerplate follows in the body text below. -->
+<h1>The HTML Boilerplate</h1>
+<h2>Introduction to the HTML Boilerplate</h2>
+<p>Now that we have seen how HTML elements and tags work, it is time to explore the bigger picture, which is called the HTML Boilerplate. This will allow us to understand the structure of our HTML files, just like how there is structure to letters that you would write.</p>
+
+<p>For example, in a letter, there is a section where you have your address, then you probably include a greeting such as "Dear so and so," followed by the body of your letter, and finally, you would write something like "Yours sincerely" and then your name and signature.</p>
+
+<p>Similarly, there is a structure to our HTML files, and it looks something like this. This is called a Boilerplate. It is what you usually start off with when you create any new HTML file. We will go through it line by line so that we understand it.</p>
+
+<h2>The Doctype Declaration</h2>
+<p>At the top of every HTML file, there should be a "Doctype declaration." This tag tells the browser which version of HTML the file was written in.</p>
+
+<p>The latest version of HTML is HTML5, and the Doctype declaration looks like this:</p>
+<!-- To prevent the browser from interpreting an HTML tag as functional code and instead display it as plain text on the screen, you need to use HTML escape characters for the angle brackets (< and >). -->
+<!-- Here's how to do it-->
+<!-- Replace the opening angle bracket (<) with &lt; or &#60;.  Replace the closing angle bracket (>) with &gt; or &#62;. -->
+<p><span style="background-color: rgb(220, 220, 220);">&lt;!DOCTYPE html&gt;</span></p>
+
+<p>This line tells any browser reading our HTML file that we have written our code in HTML Version 5.</p>
+
+<h2>The Root HTML Element</h2>
+<p>The next part is the actual <span style="background-color: rgb(220, 220, 220);">&lt;html&gt;</span> element. This is the root of the document, meaning that everything else—every other element, whether it is an <span style="background-color: rgb(220, 220, 220);">h1</span>, an image, or a link—goes inside the opening and closing tags of the html element.</p>
+
+<p>This element has a <span style="background-color: rgb(220, 220, 220);">lang</span> attribute, which specifies the language of the text content inside that element. For example, if you are writing a website targeted at English speakers, you would set <span style="background-color: rgb(220, 220, 220);">lang="en"</span>.</p>
+
+<p>While this attribute is not very important for users who can see your website, it is more important for users who cannot. Various screen readers and assistive technologies use this language attribute to pronounce the words correctly when reading out the website.</p>
+
+<h2>The Hamburger Analogy for HTML Structure</h2>
+<p>With the <span style="background-color: rgb(220, 220, 220);">html</span> element, we start to see the beginnings of a hamburger analogy: there is a bun at the top and a bun at the bottom. Everything that belongs inside the <span style="background-color: rgb(220, 220, 220);">html</span> element is sandwiched between these two buns.</p>
+
+<p>This analogy helps visualize the nesting structure of HTML elements.</p>
+
+<h2>The Head Element</h2>
+<p>The next part of the HTML boilerplate is the <span style="background-color: rgb(220, 220, 220);">&lt;head&gt;</span> element. This section contains important information about our website that is not displayed to the user.</p>
+
+<p>It includes things that help the website render correctly in the browser but does not include any content like text or images that the user will see.</p>
+
+<p>One essential tag in the head section is the <span style="background-color: rgb(220, 220, 220);">meta</span> tag for character set encoding, usually set as <span style="background-color: rgb(220, 220, 220);">UTF-8</span>. This ensures that the characters used on your website display correctly, including emojis and special symbols like multiplication and division signs.</p>
+
+<p>By convention, this tag is included as is in the HTML boilerplate using the <span style="background-color: rgb(220, 220, 220);">UTF-8</span> character set, which is one of the most common and widely supported.</p>
+
+<h2>The Title Element</h2>
+<p>Another important tag in the head section is the <span style="background-color: rgb(220, 220, 220);">&lt;title&gt;</span> element. The content inside the opening and closing <span style="background-color: rgb(220, 220, 220);">&lt;title&gt;</span> tags specifies the title of your website, which is displayed in the browser's tab bar.</p>
+
+<p>For example, if you right-click on any website in Chrome and select "View Page Source," you will see the <span style="background-color: rgb(220, 220, 220);">DOCTYPE</span>, the <span style="background-color: rgb(220, 220, 220);">html</span> element, the <span style="background-color: rgb(220, 220, 220);">head</span> section with the character set meta tag, and the <span style="background-color: rgb(220, 220, 220);">title</span> tag specifying the page title.</p>
+
+<p>In our example, the title will simply say "My Website."</p>
+
+<h2>Additional Head Elements</h2>
+<p>There are many other tags that can go into the head element, as seen on websites like Google's homepage. However, for now, the character set meta tag and the title are the most important elements that will always go into your HTML files.</p>
+
+<p>We will cover other tags as we come across them.</p>
+
+<h2>The Body Element</h2>
+<p>The next part of the HTML boilerplate is the <span style="background-color: rgb(220, 220, 220);">&lt;body&gt;</span> element. Just like a person, after the head element comes the body element.</p>
+
+<p>Inside the body element is where we will spend the majority of our time creating and writing our website. This is where all the content of the website goes: text, titles, images, links, and everything else you can do with HTML to create content and structure.</p>
+
+<p>All of this content goes between the opening and closing tags of the body element.</p>
+
+<h2>Content Inside the Body</h2>
+<p>Inside the body, you can include headings such as <span style="background-color: rgb(220, 220, 220);">h1</span>, images, links, and many other HTML elements. This is essentially where the "meat" of your website lives.</p>
+
+<p>Once the HTML document is complete, the structure looks like a hamburger: the <span style="background-color: rgb(220, 220, 220);">html</span> element is the bun, the <span style="background-color: rgb(220, 220, 220);">head</span> and <span style="background-color: rgb(220, 220, 220);">body</span> elements are the layers inside, and the content is sandwiched accordingly.</p>
+
+<p>By default, most websites start with a boilerplate that looks like this.</p>
+
+<h2>Writing Your Own Boilerplate</h2>
+<p>When starting out, it is often recommended to type out this boilerplate manually when creating new websites. You can practice this now by going into VS Code, typing out these elements, and creating your website entirely from scratch.</p>
+
+<p>This practice helps you understand the structure and nesting of HTML elements.</p>
+
+<h2>Nesting and Indentation in HTML</h2>
+<p>Nesting is a fundamental concept in HTML and programming in general. Using the hamburger analogy, the <span style="background-color: rgb(220, 220, 220);">html</span> element is the top and bottom bun, and everything inside is sandwiched between.</p>
+
+<p>Similarly, the <span style="background-color: rgb(220, 220, 220);">body</span> element has opening and closing tags, and the content inside is like the filling between slices of tomato.</p>
+
+<p>Some HTML tags have opening and closing tags on the same line if the content is short, but they still have a beginning and an end.</p>
+
+<p>Proper indentation is important when writing code. Indenting nested elements helps visualize the structure clearly. For example, the head section is indented inside the html section, just like lettuce inside a hamburger.</p>
+
+<p>This keeps the code tidy and easy to read at a glance.</p>
+
+<h2>VS Code Shortcut for Boilerplate</h2>
+<p>Using VS Code, there is a shortcut to avoid typing the boilerplate every time. Once you have typed it out once or twice and know how it looks, you can save time by typing an exclamation mark (<span style="background-color: rgb(220, 220, 220);">!</span>) and pressing Enter on the first suggestion.</p>
+
+<p>This automatically inserts the entire boilerplate code for you, saving time when creating many HTML documents.</p>
+
+<p>Note that this only works if you have created a file with the <span style="background-color: rgb(220, 220, 220);">.html</span> extension. If you save the file with another extension, this shortcut will not work.</p>
+
+<h2>Additional Meta Tags</h2>
+<p>There are a couple of meta tags you might see in the boilerplate that we haven't covered yet.</p>
+
+<p>One is <span style="background-color: rgb(220, 220, 220);">&lt;meta http-equiv="X-UA-Compatible" content="IE=edge"&gt;</span>, which keeps the code compatible with Internet Explorer. However, Internet Explorer has been deprecated and is no longer in use, so you can delete this line from your VS Code autogenerated boilerplate to keep your code clean.</p>
+
+<p>Another important meta tag is the viewport tag, which defines how the website should be displayed relative to the screen it is rendered on. This tag tells the browser how to display your website when it first opens.</p>
+
+<h2>Building Your Own HTML Burger</h2>
+<p>Now that we have learned all about HTML boilerplates, it is time to build your own boilerplate, or in this case, build your own burger.</p>
+
+<p>There are endless numbers of HTML elements, and we will be creating our own HTML elements. The important thing to understand is how nesting works in HTML and how to keep your code tidy by using good indentation and programming practices.</p>
+
+<p>Imagine building the world's best burger: you can have it vegan, vegetarian, with bacon, or whatever your heart desires, but you have to write it in HTML code.</p>
+
+<p>Let's begin by creating a bun element with opening and closing tags, and adding attributes. You can add as many attributes as you like by giving each a name and a value after an equal sign.</p>
+
+<p>Now it is your turn to invent. Head over to VS Code and build your own burger, adding whatever elements you want, such as tomatoes or ham. Make sure to keep the indentation correct and work with the idea of opening and closing tags.</p>
+
+<p>Be as creative as you like, and be sure to share your code for your burger in the Q&A section.</p>
+
+<p>If you want some inspiration, here is one that was made earlier, but practice making your own and doing it your way.</p>
+
+<p>Once you are done, head over to the next lesson.</p>
+
+<h2>Key Takeaways</h2>
+<ul>
+    <li>The HTML Boilerplate provides the essential structure for every HTML document.</li>
+    <li>The <span style="background-color: rgb(220, 220, 220);">&lt;!DOCTYPE html&gt;</span> declaration specifies the HTML version, which is HTML5.</li>
+    <li>The <span style="background-color: rgb(220, 220, 220);">&lt;html&gt;</span> element is the root, containing all other elements, with a lang attribute for language.</li>
+    <li>The <span style="background-color: rgb(220, 220, 220);">&lt;head&gt;</span> section contains metadata like character encoding and the page title, which are not displayed to users.</li>
+    <li>The <span style="background-color: rgb(220, 220, 220);">&lt;body&gt;</span> section contains all the visible content of the webpage.</li>
+    <li>Proper nesting and indentation in HTML help maintain clear and organized code.</li>
+    <li>VS Code offers a shortcut by typing <span style="background-color: rgb(220, 220, 220);">!</span> and pressing Enter to generate the HTML boilerplate automatically.</li>
+    <li>Some meta tags, like those for Internet Explorer compatibility, are now deprecated and can be omitted for cleaner code.</li>
+</body>
+</html>
