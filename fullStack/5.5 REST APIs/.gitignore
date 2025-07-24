@@ -1,0 +1,7 @@
+# dotenv environment variables file
+*.env
+*.env.*
+!*.env.example
+!*.env.*.example
+# let's not get angela's api codes (hardcoded into solution.js) uploaded for this one 
+solution.js

@@ -1,0 +1,24 @@
+/* rudil24 style sheet for spanish color vocab exercise 5.4 */
+.color-title { /* for any elements with this attribute class */
+    font-weight: normal;
+    /* font weight can be words and/or 100 - 900 where 400 is normal and 700 is bold. 
+    /* full definition https://developer.mozilla.org/en-US/docs/Web/CSS/font-weight */
+}
+#red { /*for the element with id=red */
+    color: red
+}
+#orange {
+    color: orange
+}
+#blue {
+    color: blue
+}
+#green {
+    color: green
+}
+#yellow {
+    color: yellow
+}
+img { /*for all images*/
+    height: 200px;
+    width: 200px  }
