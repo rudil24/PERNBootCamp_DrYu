@@ -19,3 +19,66 @@ footer {
   color: midnightblue;
 }
 
+.creative { /* will use this for specific text spans with class "creative" */
+  color: midnightblue;
+}
+.card {
+  width: 45%;
+}   
+.left {
+  float: left;
+}   
+.right {
+  float: right
+}   
+.tile-image {
+  height: 200px;
+  float: left;
+  margin-right: 50px;
+}
+@media (max-width: 680px) { /* Responsive styles for smaller screens */
+  .logo {
+    width: 100px;
+  }
+
+  h1 {
+    font-size: 3.5rem;
+    text-align: center;
+  }
+
+  .card {
+    width: 100%;
+    display: block;
+    margin-bottom: 30px;
+    text-align: justify;
+  }
+
+  .card img {
+    margin-bottom: 10px;
+    width: 100%;
+    display: inline;
+    /* The primary differences between display: block, display: inline, and display: inline-block in CSS relate to how elements occupy space, handle line breaks, and respond to dimension and margin/padding properties.
+      display: block:
+        Occupies the full available width of its parent container, regardless of its content's size.
+        Always starts on a new line and forces subsequent elements to also start on a new line.
+        Allows setting width, height, margin (all sides), and padding (all sides). Examples include div, h1, p.
+      display: inline:
+        Occupies only the width required by its content.
+        Does not start on a new line and allows other inline elements to sit beside it on the same line.
+        Does not respect width or height properties. Top and bottom margin and padding are not applied, though left and right margin and padding are. Examples include span, a, strong.
+      display: inline-block:
+        Combines characteristics of both inline and block elements.
+        Occupies only the width required by its content, similar to inline elements, and does not force a line break, allowing other elements to sit beside it.
+        Respects width, height, margin (all sides), and padding (all sides), similar to block elements. This allows for precise control over an element's dimensions and spacing while maintaining an inline flow.
+    */
+    object-fit: cover; /* Ensures the image covers the area without stretching; but will crop the image if it needs to */
+    /* object-fit can be set with one of these five values:
+        fill: this is the default value which *stretches* the image to fit the content box, regardless of its aspect-ratio.
+        contain: increases or decreases the size of the image to fill the box whilst preserving its aspect-ratio. *always shows the entire image*.
+        cover: the image will fill the height and width of its box, once again maintaining its aspect ratio but often *cropping* the image in the process.
+        none: image will ignore the height and width of the parent and retain its original size.
+        scale-down: the image will compare the difference between none and contain in order to find the smallest concrete object size. 
+      courtesy: https://css-tricks.com/almanac/properties/o/object-fit/ 
+    */
+  }
+}   /* end small screen settings
