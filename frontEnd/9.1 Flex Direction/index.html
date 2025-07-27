@@ -13,12 +13,12 @@
     .container {
       color: white;
       border: 5px solid gold;
-      display: inline-flex;
+      display: inline-flex; /* like inline-block, but follows flexbox */
       /* width: 10rem; /* could set width this way */
       flex-direction: column;
-    /*  flex-basis: 100px; don't do it here, do it in each div*/
+    /*  flex-basis: 100px; can't do it here, have to do it in each div*/
     /*.container > * {} could do it this way OR use the nesting of {} to specify children as below */
-      > * {flex-basis: 100px;}
+      > * {flex-basis: 100px;} /* use > * to address all direct children of .container */
     }
 
     /*

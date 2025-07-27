@@ -9,9 +9,12 @@
     /* My colours for white: #f0d9b5, black: #b58863 */
     .container {
       display: grid;
-      grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr; /*8x8*/
-      grid-template-rows: 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
-      width: 800px;
+      /* grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr; /*8x8* literal way to do it, but not as clean */
+      grid-template-columns: repeat(8, 1fr); /*8x8, each column takes up equal space. came back to clean this up after learning repeat() */
+      /* grid-template-rows: 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr; */
+      grid-template-rows: repeat(8, 1fr); /*8x8, each row takes up equal space. came back to clean this up after learning repeat() */
+      width: 800px; /* 8 squares of 100px each */
+
     }
     .black {
       height: 100px;
@@ -19,8 +22,8 @@
       background-color: #b58863;
     }
     .white {
-      height: 100px;
-      width: 100px;
+     /* height: 100px;
+      width: 100px; */ /* good for readability but unnecessary, they are set by the black rows and the fractional grid allotments */
       background-color: #f0d9b5;
     }
   </style>
