@@ -41,7 +41,19 @@
 
       /* TODO: Make the astronaut box look like the goal2 image. */
       grid-column: span 2;
-
+      /* another way would be to specify its exact coordinates on the grid track, like this: */
+      /*
+      grid-row-start: 2;      
+      grid-column-start: 1;
+      grid-row-end: 3;
+      grid-column-end: 3; 
+      */
+      /* and yet another way would be to shorthand the 4 lines above using grid-area, like this: */
+      /*
+      grid-area: 2 / 1 / 3 / 3;
+      */
+      /* (grid-area is always in that exact order of rowstart / colstart / rowend / colend) */
+      /* if you use grid-area on one item, it's best to use it on all items for accuracy and consistency */
     }
   </style>
 </head>
