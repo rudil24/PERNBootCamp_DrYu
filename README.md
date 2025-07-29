@@ -16,6 +16,6 @@ The course and my learning concentrates on JavaScript implementations in the PER
 | **N** | Node.js | THE JavaScript runtime environment |
    
 Naturally the course also covers the foundational building blocks of HTML, CSS, JavaScript, and jQuery.    
------
+***
 
 [*Markdown syntax help*](https://www.markdownguide.org/basic-syntax/)
