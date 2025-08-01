@@ -1,6 +1,5 @@
 # PERN Boot Camp Exercises - Rudi Lewis
-This repo holds my work as a student in the Udemy course [The Complete Full-Stack Web Development Bootcamp](https://www.udemy.com/course/the-complete-web-development-bootcamp) by Dr. Angela Yu
-This repo is intended to do three things:
+This repo holds my work as a student in the Udemy course [The Complete Full-Stack Web Development Bootcamp](https://www.udemy.com/course/the-complete-web-development-bootcamp) by Dr. Angela Yu. This repo is intended to do three things:
 <br>
 1. show my evolving skills in full stack programming
 1. immerse me in version control (git in combo with vscode and github) so i get comfortable with checking in and checking out code from various devices and operating systems to/from this github repo
