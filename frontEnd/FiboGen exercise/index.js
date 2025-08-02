@@ -113,4 +113,4 @@ Your else statement didn't have curly braces {}. Without them, the else only app
 
 Fix: I restructured the if/else logic to correctly handle the base cases (n=1, n=2) and then run the loop only when n > 2.
 
-Hope this helps you out! 👍
+Hope this helps you out! 👍 */
