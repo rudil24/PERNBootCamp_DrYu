@@ -1,0 +1,5 @@
+Lesson 2 using node.js
+That first line was written using the fs.writeFile native node module
+That module was executed via index.js, using "node index.js" from the command line while making sure we were in this dir
+now we read back this entire file to the console by adding some fs.readFile native node module
+more details about all native node modules in the node documentation https://nodejs.org/docs/latest-v22.x/api/index.html

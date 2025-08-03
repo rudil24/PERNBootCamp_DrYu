@@ -9,7 +9,7 @@ import qr from 'qr-image';
 import fs from 'fs';
 
 
-inquirer
+inquirer //this is the user prompting package with directions at https://www.npmjs.com/package/inquirer
   .prompt([
     {
     /* Pass your questions in here */
