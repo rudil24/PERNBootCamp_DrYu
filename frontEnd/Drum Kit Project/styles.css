@@ -50,7 +50,7 @@ footer {
 
 }
 
-.set {
+.set {  /* styling applied ot the entire drum set */
   margin: 10% auto;
 }
 
@@ -59,7 +59,7 @@ footer {
   opacity: 0.8;
 }
 
-.pressed {
+.pressed {  /* styling applied to any drum key when pressed */
   box-shadow: 0 3px 4px 0 #DBEDF3;
   opacity: 0.5;
 }
@@ -68,7 +68,7 @@ footer {
   color: red;
 }
 
-.drum {
+.drum {    /* styling applied to the text on each drum key */
   outline: none;
   border: 10px solid #404B69;
   font-size: 5rem;

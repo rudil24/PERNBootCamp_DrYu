@@ -1,0 +1,11 @@
+/* style additions for jQuery lesson exercise */
+.big-title {
+  font-size: 5em;
+  color: rgb(132, 0, 255);
+  text-align: left;
+  margin-top: 20px;
+  font-family: cursive;
+}
+.margin-50 {
+  margin: 50px;
+}
