@@ -1,9 +1,9 @@
 /* rudil24 Simon Game JS/jQ script */
-var gamePattern = [];
-var userClickedPattern = [];
-var buttonColors = ["red", "blue", "green", "yellow"];
-var gameKeyStarted = false;
-var level = 0;
+let gamePattern = [];
+let userClickedPattern = [];
+let buttonColors = ["red", "blue", "green", "yellow"];
+let gameKeyStarted = false;
+let level = 0;
 
 /* listen for first keyboard input, 
 then do start game stuff and ignore further keyboard input*/
@@ -17,7 +17,7 @@ $(document).on("keydown", function() {
 
 /* capture input sequence from user */
 $(".btn").click(function()  {
-  var userChosenColor = $(this).attr("id"); //user clicked a button, jQuery stores what they clicked in object $(this), grab its id. 
+  let userChosenColor = $(this).attr("id"); //user clicked a button, jQuery stores what they clicked in object $(this), grab its id. 
   userClickedPattern.push(userChosenColor); //add it to the user input sequence array
   playSound(userChosenColor);  //passes that stored id to play that color's sound
   animatePress(userChosenColor); //passes that stored id to animate that button
@@ -48,8 +48,8 @@ function nextSequence() {
     userClickedPattern = []; //reset user button input to capture their next full sequence 
     level++; //increase game level (sequence length)
     $("#level-title").text("Level " + level);
-    var randomNumber = Math.floor(4*(Math.random())); //random whole num between 0-3
-    var randomChosenColor = buttonColors[randomNumber]; //random 0-3 gets a color from buttonColors array
+    let randomNumber = Math.floor(4*(Math.random())); //random whole num between 0-3
+    let randomChosenColor = buttonColors[randomNumber]; //random 0-3 gets a color from buttonColors array
     gamePattern.push(randomChosenColor); //push that color to end of gamePattern
     $("#" + randomChosenColor).fadeIn(100).fadeOut(100).fadeIn(100); //animate the html element with that #id
     playSound(randomChosenColor);
@@ -63,7 +63,7 @@ function animatePress(currentColor) { //pass in current color
 }
 
   function playSound(name) {
-    var buttonSound = new Audio("sounds/" + name + ".mp3"); // dotslash before sounds cause parser problem
+    let buttonSound = new Audio("sounds/" + name + ".mp3"); // dotslash before sounds cause parser problem
     buttonSound.play();
 }
 
