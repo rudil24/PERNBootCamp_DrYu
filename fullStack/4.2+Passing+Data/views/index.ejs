@@ -10,10 +10,12 @@
 <body>
   <!-- Write your code here -->
    <% if (locals.numberOfLetters) { %>
+    <!-- the locals. is key because it lets us tap into variables passed from our index.js. otherwise we'd hang the program-->
     <h1>There are <%=numberOfLetters%> letters in your name.</h1>
    <% } else { %>
     <h1>Write your name below 👇</h1>
-   <% } %>
+   <% } %> 
+   <!-- note the different uses of ejs tags above-->
   <form action="/submit" method="POST">
     <input type="text" name="fName" placeholder="First name">
     <input type="text" name="lName" placeholder="Last name">

@@ -14,16 +14,20 @@ app.use(bodyParser.urlencoded({ extended: true }));
 
 let data; //will hold the parsed data object from the JSON menu entry
 
-app.get("/", (req, res) => {
+app.get("/", (req, res) => {    //show the customer the recipe based on which button they pressed
   res.render("index.ejs", { recipeData : data});
 });
 
 app.post("/recipe", (req, res) => {
   //Step 3: Write your code here to make this behave like the solution website.
-  //Step 4: Add code to views/index.ejs to use the recieved recipe object.
-  switch(req.body.choice) {
+  //Step 4: Add code to views/index.ejs to use the received recipe object.
+  switch(req.body.choice) {  //we know we're looking for the "choice" value pair 
+  // because in the index.ejs they attributed name=choice; value=chicken/beef/fish 
+  // to corresponding <button> tag
     case "chicken":
-      data = JSON.parse(recipeJSON)[0];
+      data = JSON.parse(recipeJSON)[0];   //we used https://jsonviewer.stack.hu/ on the 
+      // recipeJSON object to help visualize which element was which recipe.
+      // JSON.parse is the way to turn JSON into JS Object.
       break;
     case "beef":
       data = JSON.parse(recipeJSON)[1];

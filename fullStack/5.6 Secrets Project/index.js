@@ -22,8 +22,8 @@ app.get("/", async (req, res) => {
         user: result.data.username, // this makes our local user in the ejs match the data.username from the axios call to the secrets api
       });
     } catch (error) {
-      console.log(error.response.data);
-      res.status(500);
+      console.log(error.response.data);  //echo error to the console
+      res.status(500);  //return status 500 to the user (server-side error)
     }
   });
 

@@ -2,6 +2,8 @@
 This repo holds my work as a student in the Udemy course [The Complete Full-Stack Web Development Bootcamp](https://www.udemy.com/course/the-complete-web-development-bootcamp) taught by Dr. Angela Yu. This repo is intended to do three things:
 <br>
 1. document my evolving skills in full stack programming
+    * the code in this repo is very much an "answers in the back of the book" endeavor
+    * for keystone and other fun projects i built from "scratch" (didn't have solution code,) see my portfolio
 1. immerse me in version control (git in combo with vscode and github) so i get comfortable with:
     * checking in and checking out code from various devices and operating systems to/from this github repo
     * learning the basics of .gitignore and protecting credentials from public repos with .env files

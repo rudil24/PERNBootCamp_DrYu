@@ -1,6 +1,6 @@
-require('dotenv').config(); //load sensitive environment variables from .env file
 import express from "express";
 import bodyParser from "body-parser";
+import 'dotenv/config';  //load sensitive environment variables from .env file
 
 const app = express();
 const port = 3000;

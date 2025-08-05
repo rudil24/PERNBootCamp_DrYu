@@ -10,17 +10,17 @@ Step 3: Add the routes to handle the render of the about and contact pages.
   Hint: Check the nav bar in the header.ejs to see the button hrefs
 Step 4: Add the partials to the about and contact pages to show the header and footer on those pages. */
 
-app.use(express.static("public"));
+app.use(express.static("public")); // signifies that our static files will be in subdir public
 
-app.get("/", (req, res) => {
+app.get("/", (req, res) => { //get homepage when requested
   res.render("index.ejs");
 });
 
-app.get("/about", (req, res) => {
+app.get("/about", (req, res) => { //get about page when requested (see hyperlink in header.ejs in views/partials)
   res.render("about.ejs");
 });
 
-app.get("/contact", (req, res) => {
+app.get("/contact", (req, res) => { //get contact page when requested (see hyperlink in header.ejs in views/partials)
   res.render("contact.ejs");
 });
 

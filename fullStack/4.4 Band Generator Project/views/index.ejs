@@ -4,7 +4,7 @@
 <!-- Step 2 - DONE If an adjective and noun are sent to this ejs file, 
     Change the h1 to show the adjective and noun.
     But when the user first goes on the website and there is no adjective and noun, 
-    Show the default h1 below -->
+    show the band name ELSE Show the default h1 if we don't have emAdj and emNoun yet -->
     <% if (locals.emAdj && locals.emNoun) { %>
       <h1> <%=emAdj%> <%=emNoun%> </h1>
      <% } else { %>

@@ -1,4 +1,4 @@
-require('dotenv').config(); //load sensitive environment variables from .env file
+import 'dotenv/config';  //load sensitive environment variables from .env file
 import express from "express";
 import axios from "axios";
 

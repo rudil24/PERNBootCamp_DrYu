@@ -17,7 +17,7 @@
   <div id="recipeContainer" class="hidden">
     <% if (!locals.recipeData) {%> 
           <!-- If no recipe yet --notice the bang goes inside the paren-- ask them to pick protein: -->
-    <h2>Pick your favourite taco ingredient 👆</h2>
+    <h2>Pick your favorite taco ingredient 👆</h2>
       <%} else {%>
         <!-- Else, show the recipe name e.g. <h2>Recipe name</h2>-->
       <h2 id="recipeTitle">
@@ -28,11 +28,11 @@
       <li>
         <%= recipeData.ingredients.protein.name %>, <%= recipeData.ingredients.protein.preparation %>
       </li>
-    <!-- Salsa name (and i added spiciness in paren) -->  
+    <!-- Salsa name (and i added spiciness in paren. It's key to customer satisfaction to know that!) -->  
      <li>
         <%= recipeData.ingredients.salsa.name %> (<%= recipeData.ingredients.salsa.spiciness %>)
      </li>
-   <!-- Every other topping -->
+   <!-- All additional toppings. The forEach is so clutch for processing arrays -->
     <% recipeData.ingredients.toppings.forEach(toppingElement=> { %>
       <li>
         <%= toppingElement.quantity %> of <%= toppingElement.name %>

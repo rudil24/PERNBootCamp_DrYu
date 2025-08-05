@@ -49,7 +49,7 @@ app.post("/", async (req, res) => {
     console.error("Failed to make request:", error.message);
     res.render("index.ejs", {
     //  error: error.message,  commented this line out, don't annoy the user with the techy error message, just say it didn't work
-    error: "No activites that match your criteria.",
+    error: "No activities that match your criteria.",
     });
   }
 });
