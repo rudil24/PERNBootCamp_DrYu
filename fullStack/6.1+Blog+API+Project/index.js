@@ -2,7 +2,7 @@ import express from "express";
 import bodyParser from "body-parser";
 
 const app = express();
-const port = 4000;
+const port = 4000;  //server.js will make API requests (port 3000), index.js will manage the in-memory array of posts "database" and respond (runs on port 4000)
 
 // In-memory data store
 let posts = [

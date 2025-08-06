@@ -11,26 +11,28 @@ app.use(bodyParser.urlencoded({ extended: true }));
 //1. GET a random joke
 app.get("/random", (req, res) => {   //path /random is where we'll GET a random joke
   const randomIndex = Math.floor(Math.random() * jokes.length);
-  res.json(jokes[randomIndex]);  // convert our object into json so that our app.get can use it
+  res.json(jokes[randomIndex]);  // convert our JS object into json object so that our api can output it properly
 });
 
 //2. GET a specific joke
 app.get("/jokes/:id", (req, res) => {  //endpoint for GETting a specific joke
-  const id = parseInt(req.params.id);  //they'll put id in the request parameters, we just need it as an integer
+  const id = parseInt(req.params.id);  //they'll put id in the request parameters "path variables", instead of "query params". hence the use of : instead of ?.  we just need to pull it out as an integer
   const foundJoke = jokes.find((joke) => joke.id === id);  //.find is a method that takes any array and returns...
                                                            // the array element varred in () when the => condition is true
                                                            // a for each loop would've been another way to do it
   res.json(foundJoke);
 });
 
-//3. GET a jokes by filtering on the joke type
+//3. GET jokes by filtering on the joke type
 app.get("/filter", (req, res) => {
   const type = req.query.type;  //need .type to be spelled/cased right, since our api docs want it to be exactly that
-  const filteredActivities = jokes.filter((joke) => joke.jokeType === type); //filter method is like find but returns ALL matches
+  const filteredActivities = jokes.filter((joke) => joke.jokeType === type); //the filter method is like find but returns ALL matches
   res.json(filteredActivities);
 });
 
-//4. POST a new joke
+//4. POST a new joke. 
+// rudil24 notes: To test it on Postman, make sure you use the Body tab to put the type and text vars (and use x-www-form-urlencoded as the format)
+// then use req.body below to parse those elements, NOT req.params like we did for id, nor req.query as we did for the filter query above.
 app.post("/jokes", (req, res) => {
   const newJoke = {
     id: jokes.length + 1,     //the elements are 0-99 but the id labels within are 1-100 so length+1 is appropriate
@@ -43,6 +45,7 @@ app.post("/jokes", (req, res) => {
 });
 
 //5. PUT a joke
+// rudil24 notes: use Postman params "path variable" for id: (jokeid you are replacing); then use Body tab to put in "type" and "text" key value pairs. (to get the Body to let you edit it, use x-www-form-urlencoded as the format)
 app.put("/jokes/:id", (req, res) => {
   const id = parseInt(req.params.id);  //get ID from postman param input
   const replacementJoke = {
@@ -79,8 +82,8 @@ app.patch("/jokes/:id", (req, res) => {
 app.delete("/jokes/:id", (req, res) => {
   const id = parseInt(req.params.id);
   const searchIndex = jokes.findIndex((joke) => joke.id === id);
-  if (searchIndex > -1) {
-    jokes.splice(searchIndex, 1);
+  if (searchIndex > -1) {           //if the search returns an array element of [0] or greater, it's found it. otherwise, it hasn't.
+    jokes.splice(searchIndex, 1);   //splice method with 1 means "take 1 array element out at location [searchIndex]"
     res.sendStatus(200);            //we get to set the status, based on success
   } else {
     res
@@ -89,7 +92,8 @@ app.delete("/jokes/:id", (req, res) => {
   }
 });
 
-//8. DELETE All jokes
+//8. DELETE All jokes'
+// rudil24 notes: in Postman use Authorization tab, "API Key" as the method, Key: (enter the master key) and Add To: Query Params. (hence parsing it with req.query.key below)
 app.delete("/all", (req, res) => {
   const userKey = req.query.key;
   if (userKey === masterKey) {

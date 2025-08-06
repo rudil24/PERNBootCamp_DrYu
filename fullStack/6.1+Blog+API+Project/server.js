@@ -3,7 +3,7 @@ import bodyParser from "body-parser";
 import axios from "axios";
 
 const app = express();
-const port = 3000;
+const port = 3000; //server.js will make API requests (port 3000), index.js will access the in-memory array "database" and respond (port 4000)
 const API_URL = "http://localhost:4000";
 
 app.use(express.static("public"));
