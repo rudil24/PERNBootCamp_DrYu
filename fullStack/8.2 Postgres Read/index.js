@@ -1,4 +1,4 @@
-require('dotenv').config(); //dotenv package can secure environment variables from .env file. make sure npm install dotenv from terminal in the project folder
+import 'dotenv/config';  //load sensitive environment variables from .env file
 import express from "express";
 import bodyParser from "body-parser";
 import pg from "pg";
@@ -7,7 +7,7 @@ const app = express();
 const port = 3000;
 
 const db = new pg.Client({
-  user: process.env.DB_USER,
+  user: process.env.DB_USER,  //securely retrieves these variables from .env file in same dir via dotenv module
   host: process.env.DB_HOST,
   database: process.env.DB_DATABASE,
   password: process.env.DB_PASSWORD,

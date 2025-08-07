@@ -1,19 +1,20 @@
+import 'dotenv/config';  //load sensitive environment variables from .env file
 import express from "express";
 import bodyParser from "body-parser";
-import pg from "pg";
+import pg from "pg";  //gets us the PostGres npm module we need
 
 const app = express();
 const port = 3000; 
 
 const db = new pg.Client({
-  user: "postgres",
-  host: "localhost",
-  database: "world",
-  password: "Pgdb24",
-  port: 5432,
+  user: process.env.DB_USER,  //safely process these variables from our .env file in same directory, powered by dotenv module
+  host: process.env.DB_HOST,
+  database: process.env.DB_DATABASE,
+  password: process.env.DB_PASSWORD,
+  port: process.env.DB_PORT,
 })
 
-db.connect();
+db.connect();  //connect us to the database named above
 
 /* Hard coded 3-line db for testing purposes, will be overwritten by db.query code when we read in our capital table from world db */
 let quiz = [
