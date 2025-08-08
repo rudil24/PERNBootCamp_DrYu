@@ -6,6 +6,8 @@
     </h1>
   </div>
   <div class="box">
+    <%# add a delete box for every listItems, which were passed in as the result.rows from our db. value=item.id so i know which one to delete from the db.
+        IMPROVEMENT IDEA: shouldn't it be a strikethrough action instead of a delete? with a garbage pail for true delete? %>
     <% for(let item of listItems){%>
       <div class="item">
         <form action="/delete" method="post">
@@ -15,19 +17,23 @@
         <p id="title<%=item.id%>">
           <%= item.title %>
         </p>
-
+        <%# this next part is where we have our 2 hidden inputs for each row, (1 convert p to input and 2 show a "done editing?" button ) 
+        invoked by pressing the edit (pencil) %>
         <form class="edit" action="/edit" method="post">
+          <%# hide the id BUT keep the value ready, we'll need to ship it with the title, so we know for what id in the db we need to update the title.%>
           <input type="hidden" name="updatedItemId" value="<%= item.id %>">
+          <%# retain existing item title when i go to edit it by using the value= "pre-stocks" our input field with existing item title.%>
           <input id="input<%=item.id%>" type="text" name="updatedItemTitle" value="<%= item.title %>" autocomplete="off"
             autofocus="true" hidden="true" />
           <button id="done<%=item.id%>" class="edit" type="submit" hidden><img class="icon"
               src="/assets/icons/check-solid.svg" alt="tick image"></button>
         </form>
+        <%# edit button (pencil). clicking on it triggers a handler function (see <script> block below). it helps real-time what's viewable v hidden) %>
         <button id="edit<%=item.id%>" class="edit" onclick="handler('<%=item.id%>')"><img class="icon"
             src="/assets/icons/pencil-solid.svg" alt="pencil image"></button>
       </div>
       <% } %>
-
+        <%# this next part for adding new items, send over the name="newItem" to match up our post route in index.js %>
         <form class="item" action="/add" method="post">
           <input type="text" name="newItem" placeholder="New Item" autocomplete="off" autofocus="true" />
           <button class="add" type="submit" name="list" value=<%=listTitle %> >+</button>
@@ -35,11 +41,11 @@
   </div>
 
   <script>
-    function handler(id) {
-      document.getElementById("title" + id).setAttribute("hidden", true)
-      document.getElementById("edit" + id).setAttribute("hidden", true)
-      document.getElementById("done" + id).removeAttribute("hidden")
-      document.getElementById("input" + id).removeAttribute("hidden")
+    function handler(id) {  //invoked when edit item pencil is clicked
+      document.getElementById("title" + id).setAttribute("hidden", true)  //hide the paragraph (the read-only item title text)
+      document.getElementById("edit" + id).setAttribute("hidden", true)   //hide the pencil
+      document.getElementById("done" + id).removeAttribute("hidden")      //give us a tick for when user is done updating
+      document.getElementById("input" + id).removeAttribute("hidden")     //and now the paragraph is an input field
     }
   </script>
   <%- include('partials/footer.ejs'); -%>
