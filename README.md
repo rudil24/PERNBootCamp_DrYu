@@ -13,7 +13,7 @@ This repo holds my work as a student in the Udemy course [The Complete Full-Stac
 The course and my learning concentrates on JavaScript implementations in the PERN stack, namely:   
 | Letter | Represents | Role |
 | :---: | :--- | :--- |
-| **P** | PostGres | aka PostGreSQL -- relational database management system with good marks in security, flexibility, and scalability for structured data |
+| **P** | PostGres | aka PostGreSQL -- relational database management system with good marks in price (free!), security, flexibility, and scalability for structured data |
 | **E** | Express.js | back-end Node.js web application framework that simplifies server-side development tasks such as routing, middleware management, and request/response handling |
 | **R** | React.js | front-end JavaScript library that aims for more seamless front ends via component-based user interfaces |
 | **N** | Node.js | the most widely used JavaScript runtime environment, enabling server-side execution of JavaScript for scalable web-based applications |
