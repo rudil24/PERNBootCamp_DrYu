@@ -24,7 +24,8 @@ import App from "./components/App";
 
 //HINT: You will need to study the classes in the styles.css file to apply styling.
 //Now let's display it for React v < 18. I'll do a v18+ in my local project folder.
-// v17 ReactDOM.render(<App />, document.getElementById("root"));
+/* v17 rendering */ 
+// ReactDOM.render(<App />, document.getElementById("root"));
 /* v18+ rendering */
 root.render(  //this React 18+ call and the const root dec differs from ReactDOM.render block of React 17 or older, but the info inside the render method should be transferrable
  <App />
